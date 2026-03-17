@@ -1,6 +1,6 @@
 function solution(n) {
     var answer = [];
-    n= String(n)
-    console.log(n.split(''))
+    answer= String(n).split('').reverse().map(Number)
+
     return answer;
 }
