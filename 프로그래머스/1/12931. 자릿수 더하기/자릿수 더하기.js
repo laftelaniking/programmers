@@ -1,18 +1,17 @@
 function solution(n)
 {
-    var answer = 0;
-    var str = '';
-    // 각각을 나누고 더한다
-    str = String(n);
-    str = str.split('')
-
-    for(var i=0; i<str.length;i++){
-      console.log(i, str[i])
-      answer += Number(str[i])
-      
+    var hap = 0;
+    var mok = n;
+    // n을 10으로 나눈 나머지를 구한다
+    // 나머지의 합 
+    // 몫이 0이 아닐 때까지 반복한다
+    while(mok != 0){
+        hap += mok % 10
+        mok = parseInt(mok / 10)
+        console.log("hap: " + hap + " mok: " + mok )
     }
-    
-    console.log(answer)
+    // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+    // console.log('Hello Javascript')
 
-    return answer;
+    return hap;
 }
